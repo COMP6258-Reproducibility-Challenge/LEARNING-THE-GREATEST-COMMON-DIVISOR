@@ -45,24 +45,10 @@ To run the program: open filebase in GCD Local as a Jupyter notebook and run all
 
 ## Running Iridis GCD
 
-*Create Python enviroment with correct requirements.
-*If you want to change important paramenters such as bases and distributions that models are trained on edit train.py
-*Create script to push job to Iridis GPU to run train.py. Can use template below.
-#!/bin/bash -l
-#SBATCH -p gpu
-#SBATCH -—mem=16G
-#SBATCH --gres=gpu:1
-#SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH -c 32
-#SBATCH --mail-type=ALL
-#SBATCH --mail-user={User Name}
-#SBATCH --time={Time Limit}
-module load conda/py3-latest 
-conda activate my-env
-python train.py
-
-Training loop trains a model on each base with each different distribution for the desired number of epochs. Outputs from the training loop are: json file containing final training metrics, log of training metrics for entire training loop, and pickle of the trained model.  
+* Create Python enviroment with correct requirements.
+* If you want to change important paramenters such as bases and distributions that models are trained on edit train.py
+* Create script to push job to Iridis GPU to run train.py. Can use template provided.
+* Training loop trains a model on each base with each different distribution for the desired number of epochs. Outputs from the training loop are: json file containing final training metrics, log of training metrics for entire training loop, and pickle of the trained model.     
 
 ## Important Parameters for Iridis GCD
 
