@@ -2,15 +2,20 @@
 
 This directory contains the source code for reproducing the results of the paper [Learning the greatest common divisor: explaining transformer predictions](https://arxiv.org/abs/2308.15594) (ICLR 2024).
 
-## Environment
+## Environment for Local GCD
 * Requirements: Python 3.12.9, Pytorch 2.7.0, Numpy 2.0.0.
 * OS: Tested on Windows
-* A NVIDIA/CUDA GPU is required if you intend to train models. This code will not run on Apple MPS. 
+* A NVIDIA/CUDA GPU is required if you intend to train models. This code will not run on Apple MPS.
 
-## Running the programs
-To run the program: open as a Jupyter notebook and run all 
+## Environment for Iridis GCD
+* Requirements: Python 3.13.2, Pytorch 2.6pip .0, Numpy 2.2.5.
+* OS: Iridis HPC 
+* Ran on V100 GPU in GPU partition.
 
-## Important Parameters
+## Running Local GCD
+To run the program: open filebase in GCD Local as a Jupyter notebook and run all. 
+
+## Important Parameters for Local GCD
 
 `validate_step`: The amount of epochs passes before the a uniformly sampled outcome dataset is generated to validate the model, default is 1.
 
