@@ -52,6 +52,7 @@ batch = 256
 max_int = 1_000_000
 sample_size = 10_000
 seed = None
+epochs = 100
 
 for base in bases:
     for dist in distributions:
@@ -80,7 +81,7 @@ for base in bases:
         criterion = nn.CrossEntropyLoss(ignore_index=pad_id)
 
         counter = 0
-        for epoch in range(100):
+        for epoch in range(epochs):
             model.train()
             total_loss = 0
             total_sequences = 0
